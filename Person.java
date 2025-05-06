@@ -2,13 +2,11 @@ public class Person {
     private String firstName;
     private String lastName;
     private int age;
-    private int birthYear; 
     
-    public Person(String firstName, String lastName, int age, int birthYear) {
+    public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.birthYear = birthYear;
     }
     
     public String getFirstName() {
@@ -35,28 +33,13 @@ public class Person {
         this.age = age;
     }
     
-    public int getBirthYear() {
-        return birthYear;
-    }
-    
-    public void setBirthYear(int birthYear) {
-        this.birthYear = birthYear;
-    }
-    
-    public void growOld(int years) {
-        age += years;
-        System.out.println(firstName + " " + lastName + " postarzał(a) się o " + years + " lat.");
-    }
-    
-    public void decreaseAge(int years) {
-        age -= years;
-        System.out.println(firstName + " " + lastName + " odmłodniał(a) o " + years + " lat.");
+    public void growOld() {
+        age++;
     }
     
     public void displayInfo() {
-        System.out.println("Osoba: " + firstName + " " + lastName);
-        System.out.println("Wiek: " + age + " lat");
-        System.out.println("Rok urodzenia: " + birthYear);
-        System.out.println();
+        System.out.println("Imię: " + firstName);
+        System.out.println("Nazwisko: " + lastName);
+        System.out.println("Wiek: " + age);
     }
 }
