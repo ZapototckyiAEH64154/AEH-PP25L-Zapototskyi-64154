@@ -1,0 +1,27 @@
+public class MojaDziewiataAplikacja {
+    public static void main(String[] args) {
+        Magazyn magazyn = new Magazyn(1, 5000, "Jan Kowalski", "kontakt@magazyn.pl", "+48 123 456 789");
+        
+        System.out.println("Stan początkowy magazynu:");
+        magazyn.wyswietlInformacje();
+        System.out.println();
+        
+        System.out.println("Demonstracja działania metod:");
+        
+        magazyn.dodajTowar(3000);
+        
+        magazyn.sprawdzCzyZajete(2500);
+        
+        magazyn.dodajTowar(2500);
+        
+        magazyn.dodajTowar(1000);
+        
+        magazyn.usunTowar(1000);
+        
+        magazyn.aktualizujKontakt("owner@magazyn.pl", "+48 123 456 789");
+        
+        System.out.println();
+        System.out.println("Stan końcowy magazynu:");
+        magazyn.wyswietlInformacje();
+    }
+}
